@@ -14,8 +14,8 @@ export default class IRBase implements IIR {
         this.baseVal = baseVal;
     }
 
-    getIr() {
-        return this.getBaseCalc() * this.getPercentage() - this.getDeductionAmount();
+    getIr() :number {
+        return parseFloat((this.getBaseCalc() * this.getPercentage() - this.getDeductionAmount()).toFixed(2));
     }
     getBaseCalc(): number {
         return this.baseVal;

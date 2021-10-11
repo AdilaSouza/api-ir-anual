@@ -4,8 +4,8 @@ const  irController = new IRController();
 
 const router = Router();
 
-const welcomeMsg  = (req:any, res:any) => res.send({"message": "welcome to IR API, to create a ir send the correct data to '/:id'"});
-const notFoundMsg = (req:any, res:any) => res.send({"message": "Route not found!"});
+const welcomeMsg  = (req:any, res:any) => res.send({"message": "bem vindo a IR API, para criar um IR envie um post com os dados corretos para '/'"});
+const notFoundMsg = (req:any, res:any) => res.send({"message": "Rota nao encontrada!"});
 
 router.post("/", irController.createIr)
 router.get ("/"   , welcomeMsg)
